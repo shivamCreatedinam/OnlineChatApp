@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="http://localhost:3002/socket.io/socket.io.js"></script>
+</head>
+
+<body>
+    <h1>Documets</h1>
+    <script>
+        // Create a Socket.IO client instance
+        const socket = io();
+        console.log(socket)
+        // Example: Emit a message to the server
+        socket.emit('hello', 'world');
+
+        // Example: Listen for messages from the server
+        socket.on('chat message', function (msg) {
+            console.log('Received message from server:', msg);
+        });
+    </script>
+</body>
+
+</html>
